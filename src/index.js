@@ -1,16 +1,16 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import "./config/ReactotronConfig";
+import './config/ReactotronConfig';
+import './config/DevToolsConfig';
 
-import { Platform, StyleSheet, Text, View, Button } from "react-native";
-import Todo from "./components/Todo";
+import {
+  Platform, StyleSheet, Text, View, Button,
+} from 'react-native';
+import Todo from './components/Todo';
 
 export default class App extends Component {
   state = {
-    todos: [
-      { id: 0, text: "Fazer exercicio" },
-      { id: 1, text: "Estudar GoNative" }
-    ]
+    todos: [{ id: 0, text: 'Fazer exercicio' }, { id: 1, text: 'Estudar GoNative' }],
   };
 
   // static getDerivedStateFromProps(nextProps, prevStat) {
@@ -34,12 +34,12 @@ export default class App extends Component {
 
   addTodo = () => {
     this.setState({
-      todos: [...this.state.todos, { id: Math.random(), text: "Novo Todo" }]
+      todos: [...this.state.todos, { id: Math.random(), text: 'Novo Todo' }],
     });
   };
 
   render() {
-    console.tron.log("hello");
+    console.tron.log('hello');
     const { todos } = this.state;
     return (
       <View style={styles.container}>
@@ -55,8 +55,8 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#f5f5f5"
-  }
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#f5f5f5',
+  },
 });
