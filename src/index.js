@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+
+import "./config/ReactotronConfig";
+
 import { Platform, StyleSheet, Text, View, Button } from "react-native";
 import Todo from "./components/Todo";
 
@@ -36,6 +39,7 @@ export default class App extends Component {
   };
 
   render() {
+    console.tron.log("hello");
     const { todos } = this.state;
     return (
       <View style={styles.container}>
