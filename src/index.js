@@ -10,24 +10,24 @@ export default class App extends Component {
     ]
   };
 
-  static getDerivedStateFromProps(nextProps, prevStat) {
-    // Executa antes do componentDidMount()
-    // Executado antes de qualquer atualização de props ou state
-    return { text: nextProps.text };
-  }
+  // static getDerivedStateFromProps(nextProps, prevStat) {
+  //   // Executa antes do componentDidMount()
+  //   // Executado antes de qualquer atualização de props ou state
+  //   return { text: nextProps.text };
+  // }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    // Executa a cada atualização antes mesmo do componente atualizar
-    // Ele decide se o componente deve atualizar ou não
-  }
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   // Executa a cada atualização antes mesmo do componente atualizar
+  //   // Ele decide se o componente deve atualizar ou não
+  // }
 
-  componentDidUpdate(prevProps, prevState) {
-    // É executado depois do componente executar o método render()
-  }
+  // componentDidUpdate(prevProps, prevState) {
+  //   // É executado depois do componente executar o método render()
+  // }
 
-  componentWillUnmount() {
-    // É executado no instante ante do componente ser desmontado;
-  }
+  // componentWillUnmount() {
+  //   // É executado no instante ante do componente ser desmontado;
+  // }
 
   addTodo = () => {
     this.setState({
@@ -42,7 +42,7 @@ export default class App extends Component {
         {todos.map(todo => (
           <Todo key={todo.id} title={todo.text} />
         ))}
-        <Button title="Adicionar todo" onPress={this.addTodo} />
+        <Button title="Adicionar todo1" onPress={this.addTodo} />
       </View>
     );
   }
